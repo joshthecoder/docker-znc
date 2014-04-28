@@ -10,7 +10,7 @@ Get the ZNC Docker Image
 ------------------------
 You can pull down a prebuilt image from the Docker repository:
 
-    docker pull joshthecoder/znc
+    docker pull joshthecoder/docker-znc
 
 Or you can clone this repository and build it yourself:
 

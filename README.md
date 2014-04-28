@@ -11,7 +11,7 @@ Setup
    - `git clone git://github.com/joshthecoder/docker-znc.git && cd docker-znc`
    - `docker build -t znc .`
  - Run ZNC in a new Docker container:
-   - `docker run -d -p 6667 -v ~/.znc:/znc-data joshthecoder/znc`
+   - `docker run -d -p 6667 joshthecoder/znc`
    - The container expects to have a ZNC data volume that contains your configuration and is used to store data.
  - Connect to ZNC and enjoy!
 

@@ -1,4 +1,4 @@
-FROM        ubuntu:12.04
+FROM        ubuntu:14.04
 MAINTAINER  Josh Roesslein "http://github.com/joshthecoder/docker-znc"
 
 RUN         apt-get update && \

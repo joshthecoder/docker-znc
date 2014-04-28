@@ -1,11 +1,13 @@
-FROM        ubuntu:14.04
+FROM        ubuntu:12.04
 MAINTAINER  Josh Roesslein "http://github.com/joshthecoder/docker-znc"
 
 RUN         apt-get update && \
             apt-get install -y znc znc-python
 
-USER        daemon
+RUN         useradd -m -d /opt/znc znc && \
+            chown -R znc:znc /opt/znc
+
+USER        znc
 EXPOSE      6667
-VOLUME      ["/var/znc"]
-ENTRYPOINT  ["znc"]
-CMD         ["--foreground", "--datadir=/var/znc"]
+ENTRYPOINT  ["znc", "--datadir=/opt/znc"]
+CMD         ["--foreground"]

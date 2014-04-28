@@ -9,5 +9,5 @@ RUN         useradd -m -d /opt/znc znc && \
 
 USER        znc
 EXPOSE      6667
-ENTRYPOINT  ["znc", "--datadir=/opt/znc"]
+ENTRYPOINT  ["znc"]
 CMD         ["--foreground"]

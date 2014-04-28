@@ -38,6 +38,16 @@ Let's run a new instance of ZNC by starting a Docker container.
 
 You now have ZNC running on port 6667 and should be able to connect to it with your IRC client!
 
+Other Useful Commands
+---------------------
+If you need to invoke ZNC with your own custom options (ex: checking ZNC version):
+
+    docker run -i -t znc --version
+
+To get a listing of all supported options:
+
+    docker run -i -t znc --help
+
 Feedback
 --------
 If you have troubles or have an improvement open an issue / pull request.

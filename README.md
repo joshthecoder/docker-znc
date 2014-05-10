@@ -24,7 +24,7 @@ If you already have a ZNC configuration file just copy it into ~/.znc/configs an
 Let's start up a ZNC Docker container and setup our configuration:
 
     mkdir ~/.znc
-    docker run -i -t -v ~/.znc:/opt/.znc znc --makeconf
+    docker run -i -t -v ~/.znc:/opt/znc joshthecoder/docker-znc --makeconf
 
 Follow the prompts and once it is done it will save the configuration
 into the mounted ~/.znc folder on your host machine. When it asks to start
@@ -34,7 +34,7 @@ Launching ZNC
 -------------
 Let's run a new instance of ZNC by starting a Docker container.
 
-    docker run -d -p 6667 -v ~/.znc:/opt/.znc znc
+    docker run -d -p 6667 -v ~/.znc:/opt/znc joshthecoder/docker-znc
 
 You now have ZNC running on port 6667 and should be able to connect to it with your IRC client!
 
